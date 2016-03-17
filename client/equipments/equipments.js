@@ -1,8 +1,8 @@
 (function() {
     'use strict';
 
-    Router.route('/equipments', function() {
-        this.render('equipments');
+    Router.route('/equipments', {
+        template: 'equipments'
     });
 
     Template.equipments.helpers({
