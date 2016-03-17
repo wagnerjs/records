@@ -1,0 +1,23 @@
+<template name="equipments">
+
+    <!-- Toolbar Actions -->
+
+    <div class="container">
+        <div class="btn-toolbar" role="toolbar" aria-label="actions">
+            <a href="/equipments/new" class="btn btn-success js-show-add-equipment" role="button">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar
+            </a>
+        </div>
+    </div>
+
+    <!-- Equipments List -->
+
+    <div class="container">
+        <div class="list-group">
+            {{#each equipments }}
+            <a href="equipments/{{ _id }}" class="list-group-item">{{ name }}</a>
+            {{/each}}
+        </div>
+    </div>
+
+</template>
