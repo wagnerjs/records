@@ -21,7 +21,7 @@
                     label-class="col-sm-3"
                     input-col-class="col-sm-9"}}
                 <div>
-                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="btn btn-success" type="submit">Salvar</button>
                 </div>
             {{/autoForm}}
         </div>
@@ -29,5 +29,19 @@
 </template>
 
 <template name="equipmentEdit">
-    {{> quickForm collection="Equipments" doc=this id="updateEquipment" type="update" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"}}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Editar equipamento</h3>
+        </div>
+        <div class="panel-body">
+            {{#autoForm id="insertEquipment" collection="Equipments" type="update" doc=this }}
+                {{> afQuickFields template="bootstrap3-horizontal"
+                    label-class="col-sm-3"
+                    input-col-class="col-sm-9"}}
+                <div>
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </div>
+            {{/autoForm}}
+        </div>
+    </div>
 </template>
